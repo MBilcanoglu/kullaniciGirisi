@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		String userName, password, newPassword;
-		boolean select;
+		byte select;
 		
 		Scanner scan=new Scanner(System.in);
 		
@@ -20,10 +20,10 @@ public class Main {
 		}
 		else {
 			System.out.println("Bilgileriniz Yanlýþ !\nÞifrenizi Sýfýrlamak Ýster Misiniz? (1(Event), 0(Hayýr)):");
-			select=scan.nextBoolean();
-			if(select) {
-				System.out.println("Yeni Þifrenizi Griniz");
-				newPassword=scan.nextLine();
+			select=scan.nextByte();
+			if(select==1) {
+				System.out.print("Yeni Þifrenizi Griniz");
+				newPassword=scan.next();
 				if(newPassword.equals(password)) {
 					System.out.println("Þifre oluþturulamadý, lütfen baþka þifre giriniz");
 				}
